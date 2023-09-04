@@ -6,7 +6,8 @@ import officeImage from "../../assets/officeImage.png";
 import officeImage1 from "../../assets/officeImage1.png";
 import officeImage2 from "../../assets/officeImage2.png";
 
-import CardTopLocal from "../../components/cardTopLocal"
+import Carrousel from "../../components/Carrousel/index"
+import CardHistoric from "../../components/CardHistoric/index"
 
 export default function App() {
   return (
@@ -64,13 +65,12 @@ export default function App() {
       
       
       
+      <Carrousel/>
+
       
-<CardTopLocal/>
+      <CardHistoric/>      
       
-      
-      
-      
-      
+     
  
 
  
