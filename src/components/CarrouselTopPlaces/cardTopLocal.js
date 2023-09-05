@@ -1,6 +1,6 @@
 
 import { Text, TouchableOpacity, View, Image } from 'react-native';
-import styles from "../styles";
+import styles from "./stylesCardTopLocal";
 import officeImage1 from "../../assets/officeImage1.png";
 import officeImage2 from "../../assets/officeImage2.png";
 

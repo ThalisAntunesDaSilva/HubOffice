@@ -4,9 +4,7 @@ import styles from "./styles";
 import offices from '../../../offices';
 import CardTopLocal from "./cardTopLocal";
 
-export default function Carrousel() {
-
-    console.log(offices);
+export default function CarrouselTopPlaces() {
 
     return (
         <View style={styles.container}>

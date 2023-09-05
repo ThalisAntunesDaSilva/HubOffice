@@ -14,7 +14,7 @@ export default function CardHistoric() {
                 <Image source={pampaTec}/>
                <View style={styles.infoHistoric}>
                
-                <Text style={styles.titlePlaceHistoric}>Pampactec Alegrete</Text>
+                <Text style={styles.titlePlaceHistoric}>Pampatec Alegrete</Text>
                 <View>
                     <Text style={styles.titlePrice}>Custou</Text>
                     <Text style={styles.valuePrice}>R$ 150,00</Text>

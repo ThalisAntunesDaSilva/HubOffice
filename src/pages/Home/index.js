@@ -2,12 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import { Text, TouchableOpacity, View, Image, FlatList } from 'react-native';
 import { Feather } from "@expo/vector-icons";
 import styles from "./styles";
-import officeImage from "../../assets/officeImage.png";
-import officeImage1 from "../../assets/officeImage1.png";
-import officeImage2 from "../../assets/officeImage2.png";
-
-import Carrousel from "../../components/Carrousel/index"
+import CarrouselTopPlaces from "../../components/CarrouselTopPlaces/index"
 import CardHistoric from "../../components/CardHistoric/index"
+import CarrouselTopLocator from "../../components/CarrouselTopLocator/index"
 
 const DATA = [
   { id: '1', text: 'Item 1' },
@@ -73,11 +70,12 @@ export default function App() {
         renderItem={({ item }) => (
       <View>
       
-      <Carrousel/>
+      <CarrouselTopPlaces/>
 
       
       <CardHistoric/>      
 
+<CarrouselTopLocator/>
     
       </View>
       
