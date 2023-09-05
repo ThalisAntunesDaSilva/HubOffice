@@ -12,7 +12,7 @@ export default [
         title: 'Sala de reunião em POA',
         numberLocations: 200,
         value: 150.00,
-        image: require('./src/assets/officeImage.png')
+        image: require('./src/assets/officeImagePOA.png')
     
     }
 ]
