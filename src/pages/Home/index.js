@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, TouchableOpacity, View, Image } from 'react-native';
+import { Text, TouchableOpacity, View, Image, FlatList } from 'react-native';
 import { Feather } from "@expo/vector-icons";
 import styles from "./styles";
 import officeImage from "../../assets/officeImage.png";
@@ -8,6 +8,10 @@ import officeImage2 from "../../assets/officeImage2.png";
 
 import Carrousel from "../../components/Carrousel/index"
 import CardHistoric from "../../components/CardHistoric/index"
+
+const DATA = [
+  { id: '1', text: 'Item 1' },
+];
 
 export default function App() {
   return (
@@ -55,22 +59,31 @@ export default function App() {
           name="map-pin"
           size={30}
           color="#000000"
-          onPress={() => navigation.navigate("Animals")}
+          onPress={() => navigation.navigate("")}
         />
 
         <Text style={styles.textLocalization}>Curitiba</Text>
 </View>
 
       
-      
-      
+<FlatList
+        data={(DATA)}
+        // style={styles.listFormRegister}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+      <View>
       
       <Carrousel/>
 
       
       <CardHistoric/>      
+
+    
+      </View>
       
-     
+      )}
+      />
+
  
 
  
