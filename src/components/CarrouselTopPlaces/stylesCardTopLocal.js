@@ -4,7 +4,6 @@ export default StyleSheet.create({
     divPopularLocation:{
         display: 'flex',
         flexDirection: 'column',
-    
         width: 290,
         height: 300,
         borderRadius: 10,
@@ -12,17 +11,25 @@ export default StyleSheet.create({
         paddingLeft: 10,
         paddingBottom: 10,
         paddingRight: 10, 
+
+        justifyContent: 'space-around',
+
+        marginLeft: 10
+
     },
 
     divImages: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+
     },
+
     divAlternativeImages:{
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
+
         
               },
               divInfoLocation:{
@@ -30,6 +37,7 @@ export default StyleSheet.create({
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 marginTop: 10,
+         
                       },
                       textLocationTitle:{
                         fontWeight: 'bold',
@@ -43,7 +51,10 @@ export default StyleSheet.create({
                         display: 'flex',
                         flexDirection: 'row',
                         justifyContent: 'space-between',
+                  
                       },
+
+
                       divQuantityToLease:{
                         display: 'flex',
                         flexDirection: 'row',

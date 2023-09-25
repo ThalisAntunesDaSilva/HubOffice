@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, TouchableOpacity, View, Image, FlatList } from 'react-native';
+import { Text, TouchableOpacity, View, FlatList, TextInput } from 'react-native';
 import { Feather } from "@expo/vector-icons";
 import styles from "./styles";
 import CarrouselTopPlaces from "../../components/CarrouselTopPlaces/index"
 import CardHistoric from "../../components/CardHistoric/index"
-import CarrouselTopLocator from "../../components/CarrouselTopLocator/index"
+// import CarrouselTopLocator from "../../components/CarrouselTopLocator/index"
 
 const DATA = [
   { id: '1', text: 'Item 1' },
@@ -14,23 +14,22 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.divSearchNotify}>
-      <TouchableOpacity onPress={() => {}}>
+     
+     
+      <TouchableOpacity  onPress={() => navigation.navigate("Animals")} style={styles.buttonInputSearchLocation}>
+      <TextInput
+        
+        placeholder="Para onde?"
+      />
       <Feather
           name="search"
           size={30}
           color="#000000"
-          onPress={() => navigation.navigate("Animals")}
+         
         />
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => {}}>
-      <Feather
-          name="bell"
-          size={30}
-          color="#000000"
-          onPress={() => navigation.navigate("Animals")}
-        />
-      </TouchableOpacity>
+     
 
       </View>
 
@@ -72,10 +71,10 @@ export default function App() {
       
       <CarrouselTopPlaces/>
 
-      
+   
       <CardHistoric/>      
 
-<CarrouselTopLocator/>
+{/* <CarrouselTopLocator/> */}
     
       </View>
       

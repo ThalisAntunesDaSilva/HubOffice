@@ -3,8 +3,10 @@ import { Text, TouchableOpacity, View, Image } from 'react-native';
 import styles from "./stylesCardTopLocal";
 import officeImage1 from "../../assets/officeImage1.png";
 import officeImage2 from "../../assets/officeImage2.png";
+import { useNavigation } from '@react-navigation/native';
 
 export default function CardTopLocal({item}) {
+  const navigation = useNavigation();
   return (
     <View style={styles.divPopularLocation}>
     <View style={styles.divImages}>
@@ -29,9 +31,10 @@ export default function CardTopLocal({item}) {
 <Text style={styles.textLocation}>Locações</Text>
 </View>
 
-   <TouchableOpacity style={styles.buttonToLease}><Text style={styles.buttonTextToLease}>Locar</Text></TouchableOpacity> 
+   <TouchableOpacity style={styles.buttonToLease}  onPress={() => navigation.navigate("Office")}><Text style={styles.buttonTextToLease}>Locar</Text></TouchableOpacity> 
 </View>
     
+
 
 
     </View>

@@ -7,6 +7,7 @@ export default StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+        paddingTop: 50
       },
 
       divSearchNotify: {
@@ -28,6 +29,14 @@ export default StyleSheet.create({
       },
       textFilterTypeLocation:{
         fontWeight: 'bold',
+      },
+
+      buttonInputSearchLocation:{
+display: 'flex',
+flexDirection: 'row',
+
+width: 250,
+justifyContent: 'space-between'
       },
     
 
