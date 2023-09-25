@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import Constants from "expo-constants";
 
 export default StyleSheet.create({
     container: {
@@ -18,21 +17,154 @@ export default StyleSheet.create({
         height: 300,
         width: '100%'
       },
-      textOverlay: {
-        position: 'absolute',
-        bottom: 100, 
-        left: 10, 
-        color: 'white',
-        fontSize: 36, 
+      headerInfoOffice:{
+        marginTop: 10,
+display: 'flex',
+flexDirection: 'row',
+width: '100%',
+justifyContent: 'space-around',
+alignItems: 'center',
+
       },
-      viewOverlay: {
-        position: 'absolute',
-        bottom: 10, 
-        left: 10, 
-        width: 350,
-        height: 80,
-        backgroundColor: 'white',
-        padding: 10,
-        borderRadius: 5, 
-      }
+
+      titleOfficeDetail:{
+        fontWeight: 'bold',
+        fontSize: 30
+    },
+
+      buttonToLease:{
+        backgroundColor: '#5446FF',
+        height: 40,
+        width: 100,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 40
+      },
+
+      viewDetailsInfo:{
+        marginTop: 30,
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+
+            },
+
+            scoreInfo:{
+          
+                fontWeight: 'bold',
+                color: '#25D76C'
+            
+            },
+            numberInfo:{
+              fontWeight: 'bold',
+            },
+            textInfoLabel:{
+              fontWeight: 'bold',
+              color: '#A9ADB7'
+            },
+
+            viewDetailInfo:{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'cemter',
+              alignItems: 'center'
+            },
+      
+      buttonTextToLease:{
+        color: '#fff',
+        fontWeight: 'bold'
+      },
+
+      viewDetailInfoOwner:{
+width: '100%',
+
+display: 'flex',
+justifyContent: 'center',
+alignItems: 'space-evenly',
+      },
+      
+    infoUser:{
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      width: '100%',
+      height: 70,
+
+      marginLeft: 30
+
+ 
+  },
+
+
+  infoUserDetailsName:{
+    fontWeight: 'bold',
+  },
+
+  infoUserDetailsUserName:{
+    color: '#A9ADB7'
+  },
+
+
+  avatarUser:{
+      marginRight: 5,
+      marginRight: 10,
+
+  },
+
+  viewPlaceDetailsText:{
+paddingLeft: 30,
+paddingRight: 30,
+  },
+
+  textPlaceDetails:{
+textAlign: 'justify',
+  },
+  infoUserDetails:{
+      display: 'flex',
+      flexDirection: 'column',
+  },
+  buttonDetails:{
+      marginLeft: 40
+  },
+ textDetails :{
+  color: '#5446FF',
+  fontWeight: 'bold',
+ },
+
+ viewTagOffice:{
+  paddingLeft: 30,
+  paddingRight: 30,
+  paddingTop: 20,
+  display: 'flex',
+  flexDirection: 'column',
+
+ },
+ viewTextItemsOffice:{
+  fontWeight:  'bold'
+ },
+
+ viewTagItemsOffice:{
+  borderWidth: 1, 
+  borderColor: 'black',
+  borderRadius: 30,
+  height: 40,
+  width:150,
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginBottom: 10,
+
+ },
+
+ titleSimilares:{
+  fontWeight: 'bold',
+  fontSize: 20,
+  paddingLeft: 30,
+  paddingTop: 30,
+}
+    
 });
