@@ -1,22 +1,104 @@
+import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Text, TouchableOpacity, View, FlatList, TextInput } from 'react-native';
+import { Text, TouchableOpacity, View, FlatList, TextInput, Modal } from 'react-native';
 import { Feather } from "@expo/vector-icons";
 import styles from "./styles";
 import CarrouselTopPlaces from "../../components/CarrouselTopPlaces/index"
 import CardHistoric from "../../components/CardHistoric/index"
 // import CarrouselTopLocator from "../../components/CarrouselTopLocator/index"
+import SectionFilterTypes from "../../components/SectionFilterTypes"
 
 const DATA = [
   { id: '1', text: 'Item 1' },
 ];
 
+
+
 export default function App() {
+
+const [openModal, setOpenModal] = useState(false)
+
+function renderModal(){
+  return(
+    <Modal visible={openModal} animationType="slide" transparent={true}> 
+      <View style={styles.viewModal}>
+        <View style={styles.viewContentModal}>
+     
+     <View style={styles.headerModal}>
+      <Text style={styles.titleModal}>Encontre seu local</Text>
+
+
+      <TouchableOpacity onPress={() => setOpenModal(false)}>
+      <Feather
+          name="x-square"
+          size={20}
+          color="#000000"
+         
+        />
+      </TouchableOpacity>
+      </View>
+
+
+      <SectionFilterTypes/>
+
+<View style={styles.modalLabelForm}>
+      <Feather
+          name="map-pin"
+          size={15}
+          color="#000000"
+          style={styles.modalIconForm}
+        />
+   <TextInput
+        style={styles.inputModal}
+        placeholder="Lugar"
+      />
+        </View>
+   
+        <View style={styles.modalLabelForm}>
+      <Feather
+          name="calendar"
+          size={15}
+          color="#000000"
+          style={styles.modalIconForm}
+        />
+   <TextInput
+        style={styles.inputModal}
+        placeholder="Data de entrada"
+      />
+        </View>
+
+
+        <View style={styles.modalLabelForm}>
+      <Feather
+          name="calendar"
+          size={15}
+          color="#000000"
+          style={styles.modalIconForm}
+        />
+   <TextInput
+        style={styles.inputModal}
+        placeholder="Data de saída"
+      />
+        </View>
+
+       
+        <TouchableOpacity style={styles.buttonSearchPlace}><Text style={styles.buttonTextSearchPlace}>Buscar</Text></TouchableOpacity> 
+        </View>
+
+       
+      </View>
+    </Modal>
+  )
+}
+
+
+
   return (
     <View style={styles.container}>
       <View style={styles.divSearchNotify}>
      
      
-      <TouchableOpacity  onPress={() => navigation.navigate("Animals")} style={styles.buttonInputSearchLocation}>
+      <TouchableOpacity  onPress={() => setOpenModal(true)} style={styles.buttonInputSearchLocation}>
       <TextInput
         
         placeholder="Para onde?"
@@ -35,19 +117,7 @@ export default function App() {
 
 
 
-      <View style={styles.divFilterTypeLocation}>
-      <TouchableOpacity onPress={() => {}}>
-      <Text  style={styles.textFilterTypeLocation}>Estação</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => {}}>
-      <Text style={styles.textFilterTypeLocation}>Sala</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => {}}>
-      <Text style={styles.textFilterTypeLocation}>Escritório</Text>
-      </TouchableOpacity>
-      </View>
+      <SectionFilterTypes/>
       
       
       <View style={styles.divLocalization}>
@@ -82,7 +152,7 @@ export default function App() {
       />
 
  
-
+{renderModal()}
  
     </View>
   );
