@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 
+
 export default StyleSheet.create({
     container: {
         flex: 1,
@@ -23,6 +24,8 @@ export default StyleSheet.create({
         color: "#A9ADB7",
         marginBottom: 5,
         marginRight: '50px',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
 
     label: {
@@ -34,17 +37,23 @@ export default StyleSheet.create({
     },
 
     input: {
-        width: "100%",
+        width: "90%",
         height: 45,
         borderColor: "gray",
-        borderWidth: 2,
-        marginBottom: 5,
+        borderWidth: 0,
+        marginBottom: 15,
         paddingHorizontal: 10,
-        borderRadius: 8,
+    },
+
+    buttonRegisterContainer: {
+        position: 'absolute',
+        bottom: 20, // ou outra distância que você deseja do rodapé
+        width: '100%',
+        alignItems: 'center',
     },
 
     inputRegister: {
-        width: "100%",
+        width: "90%",
         fontSize: 16,
         fontFamily: 'Alata-Regular',
         marginBottom: 5,
@@ -53,7 +62,7 @@ export default StyleSheet.create({
     },
     buttonRegister: {
         width: "90%",
-        backgroundColor: "#EC4760",
+        backgroundColor: "#5446FF",
         borderRadius: 20,
         fontFamily: "Alata-Regular",
         height: 70,
@@ -62,13 +71,28 @@ export default StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginBottom: 20,
+        bottom: 20,
     },
-    buttonRegisterText: {
-        color: "#F4F6F5",
+    buttonRegister: {
+        width: "60%",
+        backgroundColor: "#5446FF",
+        borderRadius: 20,
         fontFamily: "Alata-Regular",
+        height: 60,
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: 120,
+        position: "relative",
+        top: 50,
+        bottom: 5,
+    },
+    footerText: {
         fontSize: 16,
-        borderRadius: 16,
-        marginBottom: 0,
+        color: "#A7A6A5",
+        fontFamily: "Alata-Regular",
+        marginBottom: 50,
     },
     listFormRegister: {
         width: "100%",
@@ -77,7 +101,7 @@ export default StyleSheet.create({
         marginTop: 0,
         flexDirection: "row",
         alignItems: "center",
-        paddingBottom: 3,
+        paddingBottom: 10,
         marginVertical: 20,
     },
     signupRegisterText: {
@@ -86,7 +110,7 @@ export default StyleSheet.create({
         fontFamily: "Alata-Regular",
     },
     signupLinkRegisterText: {
-        color: "#EC4760",
+        color: "#5446FF",
         textDecorationLine: "underline",
         marginLeft: 5,
         fontFamily: "Alata-Regular",
@@ -110,6 +134,33 @@ export default StyleSheet.create({
     },
     tipoUsuarioButtonText: {
         textAlign: 'center',
+        color: 'black',
+    },
+    blueText: {
+        color: 'blue'
+    },
+    TwoOptionCheckbox: {
+        lexDirection: 'row',
+        justifyContent: 'space-around',
+        margin: 20,
+    },
+    checkboxContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 10,
+    },
+    checkbox: {
+        width: 20,
+        height: 20,
+        borderRadius: 5,
+        borderWidth: 2,
+        borderColor: 'black',
+        marginRight: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    checkmark: {
+        fontSize: 15,
         color: 'black',
     },
 });
