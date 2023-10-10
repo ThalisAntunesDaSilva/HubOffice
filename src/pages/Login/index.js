@@ -46,7 +46,7 @@ export default function Login({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {/* Ação quando clicar em "Não tem conta? Registre-se" */ }}>
           <Text style={styles.buttonHomeTextSubtitle}>Não tem conta?
-            {color: '#5446FF' }]}>Registre-se</Text>
+            Registre-se</Text>
         </TouchableOpacity>
       </View>
     </View>

@@ -63,10 +63,10 @@ const styles = StyleSheet.create({
     marginTop: 80,
   },
   buttonHomeTextRegister: {
-    color: '#5446FF',  // Cor do botão de login
+    color: '#5446FF',
     fontSize: 14,
     textAlign: 'center',
-    marginTop: 5,  // Adicionando uma pequena margem superior
+    marginTop: 5,
   },
 });
 
